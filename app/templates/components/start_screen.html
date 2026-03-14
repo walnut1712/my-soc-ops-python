@@ -1,15 +1,28 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6">
+    <div class="text-center max-w-sm" style="animation: slide-in 0.6s ease-out;">
+        <!-- Title with gradient text -->
+        <div class="mb-2">
+            <h1 class="text-5xl font-bold mb-2" style="background: linear-gradient(135deg, #ff5a8a 0%, #8b4dff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Soc Ops</h1>
+            <p class="text-white-60 text-lg tracking-wide">Social Bingo for Connection</p>
+        </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <!-- Rules card with glassmorphism -->
+        <div class="bg-glass rounded-2xl p-6 mb-8" style="animation: slide-in 0.7s ease-out 0.1s backwards;">
+            <h2 class="font-bold text-white mb-4 text-lg">How to Play</h2>
+            <ul class="text-left text-white-80 text-sm space-y-3">
+                <li class="flex items-start">
+                    <span class="text-rose-500 mr-3 mt-0.5">✦</span>
+                    <span>Find people who match the questions on your card</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-rose-500 mr-3 mt-0.5">✦</span>
+                    <span>Tap a square when you find a match</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-rose-500 mr-3 mt-0.5">✦</span>
+                    <span>Get 5 in a row to win!</span>
+                </li>
             </ul>
         </div>
 
@@ -17,8 +30,9 @@
             hx-post="/start"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="btn-primary w-full"
+            style="animation: slide-in 0.7s ease-out 0.2s backwards;">
+            🎮 Start Game
         </button>
     </div>
 </div>
